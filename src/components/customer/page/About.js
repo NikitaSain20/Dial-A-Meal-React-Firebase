@@ -27,28 +27,6 @@ export default function About() {
         </p>
       </section>
 
-      {/* <!-- Video 
-      <section
-        className="section-video parallax100"
-        style={{ backgroundImage: "url(assets/images/header-menu-01.jpg)" }}
-      >
-        <div className="content-video t-center p-t-225 p-b-250">
-          <span className="tit2 p-l-15 p-r-15">Discover</span>
-
-          <h3 className="tit4 t-center p-l-15 p-r-15 p-t-3">Our Video</h3>
-
-          <div
-            className="btn-play ab-center size16 hov-pointer m-l-r-auto m-t-43 m-b-33"
-            data-toggle="modal"
-            data-target="#modal-video-01"
-          >
-            <div className="flex-c-m sizefull bo-cir bgwhite color1 hov1 trans-0-4">
-              <i className="fa fa-play fs-18 m-l-2" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* <!-- Delicious & Romantic */}
       <section className="bg1-pattern p-t-120 p-b-105">
         <div className="container">
@@ -101,15 +79,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* <!-- Banner  */}
-      {/* <div
-        className="parallax0 parallax100"
-        style={{ backgroundImage: "url(assets/images/bg-cover-video-02.jpg)" }}
-      >
-        <div className="overlay0-parallax t-center size33"></div>
-      </div> */}
-
-      {/* <!-- Chef  */}
       <section className="section-chef bgwhite p-t-115 p-b-95">
         <div className="container t-center">
           <span className="tit2 t-center">Services</span>
@@ -199,31 +168,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* <!-- Sign up  */}
-      <div className="section-signup bg1-pattern p-t-85 p-b-85">
-        <form className="flex-c-m flex-w flex-col-c-m-lg p-l-5 p-r-5">
-          <span className="txt5 m-10">Specials Sign up</span>
-
-          <div className="wrap-input-signup size17 bo2 bo-rad-10 bgwhite pos-relative txt10 m-10">
-            <input
-              className="bo-rad-10 sizefull txt10 p-l-20"
-              type="text"
-              name="email-address"
-              placeholder="Email Adrress"
-            />
-            <i className="fa fa-envelope ab-r-m m-r-18" aria-hidden="true"></i>
-          </div>
-
-          {/* <!-- Button3  */}
-          <button
-            type="submit"
-            className="btn3 flex-c-m size18 txt11 trans-0-4 m-10"
-          >
-            Sign-up
-          </button>
-        </form>
-      </div>
     </>
   );
 }
