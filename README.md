@@ -37,40 +37,44 @@
 
 ## 📁 Folder Structure
 
-dial-a-meal-react-firebase/
-├── public/
-│ └── ... # Static assets (index.html, images, etc.)
-├── src/
-│ ├── components/
-│ │ ├── admin/
-│ │ │ ├── layout/ # Admin-specific layout (Header, Sidebar, Footer)
-│ │ │ │ ├── AdminHeader.js
-│ │ │ │ └── AdminFooter.js
-│ │ │ ├── pages/ # Admin-specific pages
-│ │ │ │ ├── Dashboard.js
-│ │ │ │ ├── ManageBookings.js
-│ │ │ │ └── ...
-│ │ ├── customer/
-│ │ │ ├── layout/ # Customer layout (Header, Footer)
-│ │ │ │ ├── CustomerHeader.js
-│ │ │ │ └── CustomerFooter.js
-│ │ │ ├── pages/ # Customer-specific pages
-│ │ │ │ ├── Home.js
-│ │ │ │ ├── MyBookings.js
-│ │ │ │ └── ...
-│ │ ├── auth/ # Authentication components
-│ │ │ ├── Login.js
-│ │ │ ├── Register.js
-│ │ │ └── ...
-│ │ ├── common/ # Reusable components (like buttons, loaders)
-│ ├── firebase.js # Firebase config and initialization
-│ ├── App.js # Root component
-│ ├── index.js # Entry point
-│ └── routes.js # Centralized route definitions
-├── .env
+## 📁 Folder Structure
+
+### 🔷 React + Firebase Version
+
+<details>
+<summary>
+<strong>
+dial-a-meal-mern/
+├── client/                        # React frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── admin/
+│   │   │   │   ├── layout/
+│   │   │   │   └── pages/
+│   │   │   ├── customer/
+│   │   │   │   ├── layout/
+│   │   │   │   └── pages/
+│   │   │   ├── auth/
+│   │   │   └── common/
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── routes.js
+│   ├── .env
+│   └── package.json
+│
+├── server/                        # Node + Express backend
+│   ├── controllers/               # Controller logic
+│   ├── models/                    # Mongoose models
+│   ├── routes/                    # API routes
+│   ├── config/                    # DB connection
+│   ├── server.js                  # Backend entry
+│   ├── .env
+│   └── package.json
 ├── .gitignore
-├── package.json
 └── README.md
+</strong>
+</summary>
 
 ---
 
