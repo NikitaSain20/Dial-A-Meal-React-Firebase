@@ -61,7 +61,7 @@ npm start
 
 ---
 
-📸 Screenshots
+### 📸 Screenshots
 
 <div align="center">
   <img src="public/screenshots/1.png" width="45%" style="margin: 10px;" />
@@ -76,7 +76,8 @@ npm start
 
 ---
 
-✍️ Author
+### ✍️ Author
+
 <br/>
 
 Developed by Nikita Sain
