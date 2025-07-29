@@ -77,4 +77,6 @@ npm start
 ---
 
 ✍️ Author
+<br/>
+
 Developed by Nikita Sain
