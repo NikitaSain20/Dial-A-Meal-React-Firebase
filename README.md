@@ -35,49 +35,6 @@
 
 ---
 
-## 📁 Folder Structure
-
-## 📁 Folder Structure
-
-### 🔷 React + Firebase Version
-
-<details>
-<summary>
-<strong>
-dial-a-meal-mern/
-├── client/                        # React frontend
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── admin/
-│   │   │   │   ├── layout/
-│   │   │   │   └── pages/
-│   │   │   ├── customer/
-│   │   │   │   ├── layout/
-│   │   │   │   └── pages/
-│   │   │   ├── auth/
-│   │   │   └── common/
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── routes.js
-│   ├── .env
-│   └── package.json
-│
-├── server/                        # Node + Express backend
-│   ├── controllers/               # Controller logic
-│   ├── models/                    # Mongoose models
-│   ├── routes/                    # API routes
-│   ├── config/                    # DB connection
-│   ├── server.js                  # Backend entry
-│   ├── .env
-│   └── package.json
-├── .gitignore
-└── README.md
-</strong>
-</summary>
-
----
-
 ## ⚙️ Installation
 
 ### 1. Clone the repo
