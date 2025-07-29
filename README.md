@@ -78,8 +78,3 @@ npm start
 
 ✍️ Author
 Developed by Nikita Sain
-
-```
-
-
-```
