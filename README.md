@@ -39,7 +39,7 @@
 
 ### 1. Clone the repo
 
-git clone https://github.com/NikitaSain20/Dial-A-Meal-React-Firebase.git
+git clone https://github.com/NikitaSain20/Dial-A-Meal-React-Firebase.git <br/>
 cd Dial-A-Meal-React-Firebase
 
 ### 2. Install Dependencies
