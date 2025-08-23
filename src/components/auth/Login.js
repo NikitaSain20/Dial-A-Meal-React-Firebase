@@ -31,7 +31,6 @@ export default function Login() {
       checkUser(res.user.uid);
     } catch (err) {
       setloading(false);
-      console.log("Error in login", err);
       toast.error(err.message);
     }
   };

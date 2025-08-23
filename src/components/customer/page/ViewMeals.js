@@ -20,7 +20,6 @@ export default function ViewMeals() {
       );
     });
   };
-  console.log(meals);
   return (
     <>
       {/* // ------banner starts------- */}
@@ -44,33 +43,34 @@ export default function ViewMeals() {
                   <div class="item-mainmenu m-b-36">
                     <div class="flex-w flex-b m-b-3 p-2">
                       <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Monday: {el.Monday}
+                        Monday: {el.Monday}
                       </a>
                       <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Tuesday: {el.Tuesday}
+                        Tuesday: {el.Tuesday}
                       </a>
                       <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Wednesday: {el.Wednesday}
+                        Wednesday: {el.Wednesday}
                       </a>
                       <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Thursday: {el.Thursday}
+                        Thursday: {el.Thursday}
                       </a>
                       <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Fridaay: {el.Friday}
+                        Fridaay: {el.Friday}
                       </a>
                       <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Saturday: {el.Saturday}
+                        Saturday: {el.Saturday}
                       </a>
                       <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Sunday: {el.Sunday}
+                        Sunday: {el.Sunday}
                       </a>
                     </div>
                     <div class="line-item-mainmenu bg3-pattern"></div>
-                      <h6 className="text-center">Price/Day</h6>
-                    <div class="price-item-mainmenu txt22 text-center">Rs. {el.priceperday}</div>
+                    <h6 className="text-center">Price/Day</h6>
+                    <div class="price-item-mainmenu txt22 text-center">
+                      Rs. {el.priceperday}
+                    </div>
                     <span class="info-item-mainmenu txt23"></span>
                   </div>
-               
                 </div>
               </div>
             ))}

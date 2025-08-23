@@ -1,4 +1,12 @@
-import { addDoc, collection, Timestamp, query, where, onSnapshot, getDocs } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  Timestamp,
+  query,
+  where,
+  onSnapshot,
+  getDocs,
+} from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ClockLoader } from "react-spinners";
@@ -69,39 +77,49 @@ export default function CustomBookings() {
     const mealsRef = collection(db, "Meals");
 
     if (breakfasts) {
-      const breakfastQuery = query(mealsRef, where("type", "==", "Breakfast"),where("status", "==", true));
+      const breakfastQuery = query(
+        mealsRef,
+        where("type", "==", "Breakfast"),
+        where("status", "==", true)
+      );
       const breakfastSnapshot = await getDocs(breakfastQuery);
       const breakfastPrice = breakfastSnapshot.docs[0].data().priceperday;
       total += breakfasts * breakfastPrice;
     }
 
     if (lunchs) {
-      const lunchQuery = query(mealsRef, where("type", "==", "Lunch"),where("status", "==", true));
+      const lunchQuery = query(
+        mealsRef,
+        where("type", "==", "Lunch"),
+        where("status", "==", true)
+      );
       const lunchSnapshot = await getDocs(lunchQuery);
       const lunchPrice = lunchSnapshot.docs[0].data().priceperday;
       total += lunchs * lunchPrice;
     }
 
     if (dinners) {
-      const dinnerQuery = query(mealsRef, where("type", "==", "Dinner"),where("status", "==", true));
+      const dinnerQuery = query(
+        mealsRef,
+        where("type", "==", "Dinner"),
+        where("status", "==", true)
+      );
       const dinnerSnapshot = await getDocs(dinnerQuery);
       const dinnerPrice = dinnerSnapshot.docs[0].data().priceperday;
-      console.log(dinnerPrice);
-      
+
       total += dinners * dinnerPrice;
     }
 
-   
     if (days) {
       total *= days;
     }
 
     setTotalPrice(total);
   };
-     
+
   const calculateEndDate = () => {
     const startDateObj = new Date(startdate);
-    startDateObj.setDate(startDateObj.getDate() + parseInt(days) - 1); 
+    startDateObj.setDate(startDateObj.getDate() + parseInt(days) - 1);
     const calculatedEndDate = startDateObj.toISOString().split("T")[0];
     setenddate(calculatedEndDate);
   };
@@ -126,7 +144,7 @@ export default function CustomBookings() {
         startdate: startdate,
         enddate: enddate,
         createdat: Timestamp.now(),
-        status: "Pending"
+        status: "Pending",
       });
       setloading(false);
 
@@ -137,10 +155,8 @@ export default function CustomBookings() {
     } catch (err) {
       setloading(false);
       toast.error("Something Went Wrong");
-      console.log("Error in adding booking", err);
     }
   };
-
 
   return (
     <>
@@ -174,17 +190,16 @@ export default function CustomBookings() {
                   Add Customize Bookings
                 </h3>
               </div>
-             <div>
-              
-             </div>
-             <div className="d-flex justify-content-center">
-              {meals?.map((el)=>(
-                <>
-                <h6 style={{marginLeft:"5px"}}>{el?.type}: Rs. {el?.priceperday},</h6>
-                </>
-              ))}
-              
-             </div>
+              <div></div>
+              <div className="d-flex justify-content-center">
+                {meals?.map((el) => (
+                  <>
+                    <h6 style={{ marginLeft: "5px" }}>
+                      {el?.type}: Rs. {el?.priceperday},
+                    </h6>
+                  </>
+                ))}
+              </div>
               <form
                 onSubmit={handleForm}
                 class="wrap-form-reservation size22 m-l-r-auto"

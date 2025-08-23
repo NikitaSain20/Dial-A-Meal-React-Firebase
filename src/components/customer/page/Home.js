@@ -21,7 +21,6 @@ export default function Home() {
       );
     });
   };
-  console.log(meals);
   return (
     <>
       {/* <div class="carousel-item">
@@ -205,11 +204,7 @@ export default function Home() {
                       </h4>
                     </a>
 
-                    <p className="m-b-20">
-                      We provide you home delivery
-                    </p>
-
-                   
+                    <p className="m-b-20">We provide you home delivery</p>
                   </div>
                 </div>
               </div>
@@ -233,7 +228,6 @@ export default function Home() {
                     <p className="m-b-20">
                       We provide you best hygenic food here
                     </p>
-
                   </div>
                 </div>
               </div>
@@ -243,21 +237,22 @@ export default function Home() {
                 <div className="blo1">
                   <div className="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
                     <a href="#">
-                      <img src="assets/images/avatar-04.jpg" alt="IMG-INTRO" height={215}/>
+                      <img
+                        src="assets/images/avatar-04.jpg"
+                        alt="IMG-INTRO"
+                        height={215}
+                      />
                     </a>
                   </div>
 
                   <div className="wrap-text-blo1 p-t-35">
                     <a href="#">
                       <h4 className="txt5 color0-hov trans-0-4 m-b-13">
-                      Best Chefs
+                        Best Chefs
                       </h4>
                     </a>
 
-                    <p className="m-b-20">
-                      We provide you our best chefs
-                    </p>
-
+                    <p className="m-b-20">We provide you our best chefs</p>
                   </div>
                 </div>
               </div>
@@ -275,49 +270,50 @@ export default function Home() {
           </div>
 
           <section class="section-mainmenu p-t-110 p-b-70 bg1-pattern">
-        <div class="container-fluid">
-          <div class="row">
-            {meals.map((el) => (
-              <div class="col-md-10 col-lg-3 p-r-35 p-r-15-lg m-l-r-auto">
-                <div class="wrap-item-mainmenu ">
-                  <h3 class="tit-mainmenu tit10 p-b-25 p-4">{el.type}</h3>
+            <div class="container-fluid">
+              <div class="row">
+                {meals.map((el) => (
+                  <div class="col-md-10 col-lg-3 p-r-35 p-r-15-lg m-l-r-auto">
+                    <div class="wrap-item-mainmenu ">
+                      <h3 class="tit-mainmenu tit10 p-b-25 p-4">{el.type}</h3>
 
-                  <div class="item-mainmenu">
-                    <div class="flex-w flex-b  p-2">
-                      <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Monday: {el.Monday}
-                      </a>
-                      <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Tuesday: {el.Tuesday}
-                      </a>
-                      <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Wednesday: {el.Wednesday}
-                      </a>
-                      <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Thursday: {el.Thursday}
-                      </a>
-                      <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Fridaay: {el.Friday}
-                      </a>
-                      <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Saturday: {el.Saturday}
-                      </a>
-                      <a href="#" class="name-item-mainmenu txt21 p-3">
-                       Sunday: {el.Sunday}
-                      </a>
+                      <div class="item-mainmenu">
+                        <div class="flex-w flex-b  p-2">
+                          <a href="#" class="name-item-mainmenu txt21 p-3">
+                            Monday: {el.Monday}
+                          </a>
+                          <a href="#" class="name-item-mainmenu txt21 p-3">
+                            Tuesday: {el.Tuesday}
+                          </a>
+                          <a href="#" class="name-item-mainmenu txt21 p-3">
+                            Wednesday: {el.Wednesday}
+                          </a>
+                          <a href="#" class="name-item-mainmenu txt21 p-3">
+                            Thursday: {el.Thursday}
+                          </a>
+                          <a href="#" class="name-item-mainmenu txt21 p-3">
+                            Fridaay: {el.Friday}
+                          </a>
+                          <a href="#" class="name-item-mainmenu txt21 p-3">
+                            Saturday: {el.Saturday}
+                          </a>
+                          <a href="#" class="name-item-mainmenu txt21 p-3">
+                            Sunday: {el.Sunday}
+                          </a>
+                        </div>
+                        <div class="line-item-mainmenu bg3-pattern"></div>
+                        <h6 className="text-center">Price/Day</h6>
+                        <div class="price-item-mainmenu txt22 text-center">
+                          Rs. {el.priceperday}
+                        </div>
+                        <span class="info-item-mainmenu txt23"></span>
+                      </div>
                     </div>
-                    <div class="line-item-mainmenu bg3-pattern"></div>
-                      <h6 className="text-center">Price/Day</h6>
-                    <div class="price-item-mainmenu txt22 text-center">Rs. {el.priceperday}</div>
-                    <span class="info-item-mainmenu txt23"></span>
                   </div>
-               
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
         </div>
       </section>
       <section className="bg2-pattern  p-b-110 t-center p-l-15 p-r-15">
@@ -336,8 +332,8 @@ export default function Home() {
           prepared under very hygienic conditions
         </p>
       </section>
-        {/* <!-- Delicious & Romantic */}
-        <section className="bg1-pattern p-t-120 p-b-105">
+      {/* <!-- Delicious & Romantic */}
+      <section className="bg1-pattern p-t-120 p-b-105">
         <div className="container">
           {/* <!-- Delicious  */}
           <div className="row">
@@ -389,11 +385,8 @@ export default function Home() {
       </section>
 
       {/* <!-- Event  */}
-      
 
       {/* events ends */}
-
-    
 
       {/* <!-- Review --> */}
       {/* <section className="section-review p-t-115"> */}
@@ -550,9 +543,6 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-
-    
-    
     </>
   );
 }

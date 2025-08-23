@@ -40,12 +40,10 @@ export default function ViewCustomBookings() {
           // Fetch custom bookings for this customerId
           getAllBookings(customerId);
         } else {
-          console.log("Customer ID not found.");
           nav("/login");
         }
       });
     } else {
-      console.log("No user is logged in.");
       nav("/login");
     }
   }, []);

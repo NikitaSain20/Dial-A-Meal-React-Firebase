@@ -29,11 +29,9 @@ export default function AddBookings() {
 
     if (pricingsnap.exists()) {
       let pricingsData = pricingsnap.data();
-      console.log(pricingsData);
       setduration(pricingsData.duration);
       setprice(pricingsData.price);
     } else {
-      console.log("Error in fetching single category");
       toast.error("Something Went Wrong");
     }
   };
@@ -62,7 +60,6 @@ export default function AddBookings() {
     } catch (err) {
       setloading(false);
       toast.error("Something Went Wrong");
-      console.log("Error in add meal", err);
     }
   };
 

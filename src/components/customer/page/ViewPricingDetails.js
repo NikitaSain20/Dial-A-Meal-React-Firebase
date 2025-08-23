@@ -44,41 +44,6 @@ export default function ViewPricingDetails() {
       );
     });
   };
-  console.log(pricings);
-  // var [type, settype] = useState("");
-  // var [Monday, setMonday] = useState("");
-  // var [Tuesday, setTuesday] = useState("");
-  // var [Wednesday, setWednesday] = useState("");
-  // var [Thursday, setThursday] = useState("");
-  // var [Friday, setFriday] = useState("");
-  // var [Saturday, setSaturday] = useState("");
-  // var [Sunday, setSunday] = useState("");
-  // var [priceperday, setpriceperday] = useState("");
-  // var [loading, setloading] = useState(false);
-
-  // useEffect(() => {
-  //   getSingleMeal();
-  // }, []);
-  // const getSingleMeal = async () => {
-  //   let mealsRef = doc(db, "Meals", id);
-  //   let mealsnap = await getDoc(mealsRef);
-  //   console.log(mealsRef);
-  //   if (mealsnap.exists()) {
-  //     let mealsData = mealsnap.data();
-  //     settype(mealsData.type);
-  //     setMonday(mealsData.Monday);
-  //     setTuesday(mealsData.Tuesday);
-  //     setWednesday(mealsData.Wednesday);
-  //     setThursday(mealsData.Thursday);
-  //     setFriday(mealsData.Friday);
-  //     setSaturday(mealsData.Saturday);
-  //     setSunday(mealsData.Sunday);
-  //     setpriceperday(mealsData.priceperday);
-  //   } else {
-  //     console.log("Error in fetching single category");
-  //     toast.error("Something Went Wrong");
-  //   }
-  // };
 
   return (
     <>

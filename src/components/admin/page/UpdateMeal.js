@@ -35,7 +35,6 @@ export default function UpdateMeal() {
   const getSingleMeal = async () => {
     let pricingsref = doc(db, "Meals", id);
     let pricingsnap = await getDoc(pricingsref);
-    console.log(pricingsref);
     if (pricingsnap.exists()) {
       let pricingsData = pricingsnap.data();
       settype(pricingsData.type);
@@ -49,7 +48,6 @@ export default function UpdateMeal() {
       setSunday(pricingsData.Sunday);
       setpriceperday(pricingsData.priceperday);
     } else {
-      console.log("Error in fetching single category");
       toast.error("Something Went Wrong");
     }
   };
@@ -77,7 +75,6 @@ export default function UpdateMeal() {
       }, 700);
     } catch (err) {
       setloading(false);
-      console.log("Error in updating category", err);
       toast.error("Something Went Wrong");
     }
   };
@@ -133,7 +130,7 @@ export default function UpdateMeal() {
                   <span class="txt9">Type</span>
 
                   <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                  <select
+                    <select
                       class="bo-rad-10 sizefull txt10 p-l-20"
                       name="type"
                       placeholder="type of meal"
@@ -143,7 +140,9 @@ export default function UpdateMeal() {
                       }}
                       required
                     >
-                      <option value="" disabled>Choose type of meal</option>
+                      <option value="" disabled>
+                        Choose type of meal
+                      </option>
                       <option>Breakfast</option>
                       <option>Lunch</option>
                       <option>Dinner</option>

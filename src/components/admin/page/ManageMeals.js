@@ -57,7 +57,6 @@ export default function ManageMeals() {
         setloading(false);
         toast.success("Data Deleted Succesfully");
       } catch (err) {
-        console.log("Error in deleting category", err);
         setloading(false);
         toast.error("Something Went Wrong");
       }
@@ -136,8 +135,9 @@ export default function ManageMeals() {
                     {meals?.map((i, index) => (
                       <tr key={index}>
                         <th scope="row">{index + 1}</th>
-                        <td>{i?.type}
-                          <br/>
+                        <td>
+                          {i?.type}
+                          <br />
                           Rs. {i?.priceperday}
                         </td>
                         <td>{i?.Monday}</td>
@@ -169,7 +169,6 @@ export default function ManageMeals() {
                   </tbody>
                 </table>
               </div>
-
             </div>
           </div>
         </section>

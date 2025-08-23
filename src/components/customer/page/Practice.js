@@ -1,5 +1,12 @@
-
-import { addDoc, collection, Timestamp ,doc, query, where, onSnapshot} from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  Timestamp,
+  doc,
+  query,
+  where,
+  onSnapshot,
+} from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ClockLoader } from "react-spinners";
@@ -14,8 +21,8 @@ export default function Practice() {
   var [startdate, setstartdate] = useState("");
   var [enddate, setenddate] = useState("");
   var [loading, setloading] = useState(false);
-  var[days,setDays]=useState("");
-  var[totalPrice,setTotalPrice]=useState("");
+  var [days, setDays] = useState("");
+  var [totalPrice, setTotalPrice] = useState("");
   var [meals, setmeals] = useState([]);
 
   var spinnerObj = {
@@ -59,7 +66,7 @@ export default function Practice() {
     e.preventDefault();
     setloading(true);
 
-    const user = auth.currentUser; 
+    const user = auth.currentUser;
     try {
       let custombookingsref = collection(db, "/Custombookings");
       addDoc(custombookingsref, {
@@ -68,12 +75,12 @@ export default function Practice() {
         breakfasts: breakfasts,
         lunchs: lunchs,
         dinners: dinners,
-        days:days,
-        totalPrice:totalPrice,
+        days: days,
+        totalPrice: totalPrice,
         startdate: startdate,
         enddate: enddate,
         createdat: Timestamp.now(),
-        status: "Pending"
+        status: "Pending",
       });
       setloading(false);
 
@@ -84,7 +91,6 @@ export default function Practice() {
     } catch (err) {
       setloading(false);
       toast.error("Something Went Wrong");
-      console.log("Error in adding booking", err);
     }
   };
 
@@ -120,9 +126,7 @@ export default function Practice() {
                   Add Customize Bookings
                 </h3>
               </div>
-             <div>
-              
-             </div>
+              <div></div>
               <form
                 onSubmit={handleForm}
                 class="wrap-form-reservation size22 m-l-r-auto"

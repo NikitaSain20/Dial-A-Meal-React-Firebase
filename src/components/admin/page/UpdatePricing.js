@@ -24,7 +24,6 @@ export default function UpdatePricing() {
   const getSinglePricing = async () => {
     let pricingsref = doc(db, "Pricings", id);
     let pricingsnap = await getDoc(pricingsref);
-    console.log(pricingsref);
     if (pricingsnap.exists()) {
       let pricingsData = pricingsnap.data();
       setname(pricingsData.name);
@@ -32,7 +31,7 @@ export default function UpdatePricing() {
       setdescription(pricingsData.description);
       setprice(pricingsData.price);
     } else {
-      console.log("Error in fetching single category");
+      ("Error in fetching single category");
       toast.error("Something Went Wrong");
     }
   };
@@ -55,7 +54,6 @@ export default function UpdatePricing() {
       }, 700);
     } catch (err) {
       setloading(false);
-      console.log("Error in updating category", err);
       toast.error("Something Went Wrong");
     }
   };

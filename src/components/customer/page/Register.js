@@ -34,7 +34,7 @@ export default function Register() {
       addData(res.user.uid);
     } catch (err) {
       setloading(false);
-      console.log("Error in regsiter", err);
+      "Error in regsiter", err;
       toast.error(err.message);
     }
   };
@@ -63,7 +63,6 @@ export default function Register() {
     } catch (err) {
       setloading(false);
       toast.error("Something Went Wrong");
-      console.log("Error in add user", err);
     }
   };
 

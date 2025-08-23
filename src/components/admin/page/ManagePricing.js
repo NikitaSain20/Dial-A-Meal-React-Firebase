@@ -59,7 +59,6 @@ export default function ManagePricing() {
         setloading(false);
         toast.success("Data Deleted Succesfully");
       } catch (err) {
-        console.log("Error in deleting category", err);
         setloading(false);
         toast.error("Something Went Wrong");
       }
@@ -122,7 +121,10 @@ export default function ManagePricing() {
                       <th scope="col">Name</th>
                       <th scope="col">Duration(In Months)</th>
                       <th scope="col">Price</th>
-                      <th scope="col" width="400px"> Description</th>
+                      <th scope="col" width="400px">
+                        {" "}
+                        Description
+                      </th>
 
                       <th scope="col">Created At</th>
                       <th scope="col">Action</th>
@@ -159,7 +161,6 @@ export default function ManagePricing() {
                   </tbody>
                 </table>
               </div>
-
             </div>
           </div>
         </section>

@@ -2,7 +2,14 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ClockLoader } from "react-spinners";
 import { db } from "../../../Firebase";
-import { addDoc, collection, query, where, getDocs, Timestamp } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  query,
+  where,
+  getDocs,
+  Timestamp,
+} from "firebase/firestore";
 import { toast } from "react-toastify";
 
 export default function AddMeal() {
@@ -63,7 +70,6 @@ export default function AddMeal() {
     } catch (err) {
       setloading(false);
       toast.error("Something Went Wrong");
-      console.log("Error in add meal", err);
     }
   };
 
@@ -108,7 +114,9 @@ export default function AddMeal() {
         {/* add meal starts */}
         <section className="section-contact bg1-pattern p-t-2 p-b-70">
           <div className="container">
-            <h3 className="tit7 t-center p-b-52 p-t-50 text-danger">ADD MEAL</h3>
+            <h3 className="tit7 t-center p-b-52 p-t-50 text-danger">
+              ADD MEAL
+            </h3>
 
             <form
               onSubmit={handleForm}
@@ -265,7 +273,6 @@ export default function AddMeal() {
                         setSunday(e.target.value);
                       }}
                       required
-
                     />
                   </div>
                 </div>
